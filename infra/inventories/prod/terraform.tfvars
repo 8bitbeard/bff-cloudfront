@@ -1,1 +1,1 @@
-api_config_file = "${path.module}/apis-configuration-dev.yaml"
+api_config_file = "${path.module}/api-config.yaml"
