@@ -1,0 +1,20 @@
+apis:
+  - name: payment-api
+    domain: payment-api-bff.com
+    context_path: /payment-api-bff
+    route_cache_configuration:
+      - path_pattern: "/transactions/{transactionId}/details"
+        cache_duration: 86400
+      - path_pattern: "/payments"
+        cache_duration: 3600
+  - name: order-api
+    domain: order-api-bff.com
+    context_path: /order-api-bff
+    route_cache_configuration:
+      - path_pattern: "/order-api-bff/orders/{orderId}"
+        cache_duration: 43200
+      - path_pattern: "/order-api-bff/orders"
+        cache_duration: 1800
+  - name: cook-api
+    domain: cook-api-bff.com
+    context_path: /cook-api-bff
